@@ -29,7 +29,8 @@ public class FracCalc {
         		}
         		System.out.println(Calculate(Integer.parseInt(longInput[longInput.length-1])+" "+"+ "+addOn));
     		}
-    	}
+    	} 
+
     	userInput.close();
     } 
     public static String produceAnswer(String input){ 
@@ -44,7 +45,8 @@ public class FracCalc {
     	String operator = rawInput[1];
     	Fraction operand1 = new Fraction(rawInput[0].toString());
     	Fraction operand2 = new Fraction(rawInput[2].toString());
-    	return operand1.doMath(operator, operand2.getParts());
+    	operand1.doMath(operator, operand2.getParts());
+    	return operand1.getAnswer();
   
     }
 }
